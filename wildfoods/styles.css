@@ -1,7 +1,7 @@
 /* add your CSS here */
 /* add your CSS here */
 
-.animal-info {
+.plant-info {
     padding: 20px;
     width: 350px;
     margin: 0 auto;
@@ -22,7 +22,7 @@
 	padding: 1em;
 	text-align: center;
 	font-family: 'Sail', cursive;
-	font-size: 56px;
+	font-size: 54px;
 	margin: 20px 0;
 }
 	
