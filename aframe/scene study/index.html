@@ -5,18 +5,36 @@
 </head>
   <body>
         <a-scene>
-                <a-assets>
-                  <img id="boxTexture" src="https://i.imgur.com/mYmmbrp.jpg">
-                </a-assets>
+          <a-assets>
+            <img id="boxTexture" src="http://www.iteration.gallery/wp-content/uploads/2018/03/iteration-harlequin832-1024x683.png">
+            <img id="skyTexture" src='http://www.iteration.gallery/wp-content/uploads/2018/03/iteration-landscape121-1024x683.png'>
+            <audio src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay 
+              preload></audio>            
+          </a-assets>
+
+          <a-sky color="pink"></a-sky>
               
-                <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
-                  <a-animation attribute="position" to="0 2.2 -5" direction="alternate" dur="2000"
-                    repeat="indefinite"></a-animation>
-                </a-box>
-              
-                <a-camera>
-                  <a-cursor></a-cursor>
-                </a-camera>
-              </a-scene>          
+          <a-box color="blue" width="5" height="8" depth="3"
+          position="-10 2 -5" rotation="0 0 45" scale="2 0.5 3"
+          src="#texture">
+
+            <a-animation attribute="position" to="0 4.2 -8" direction="alternate" dur="3000"
+            repeat="indefinite"></a-animation>
+            <!-- These animations will start when the box is looked at. -->
+            <a-animation attribute="scale" begin="mouseenter" dur="300" to="2.3 2.3 2.3"></a-animation>
+            <a-animation attribute="scale" begin="mouseleave" dur="300" to="2 2 2"></a-animation>
+            <a-animation attribute="rotation" begin="click" dur="2000" to="360 405 45"></a-animation>
+          </a-box>
+
+          <a-text value="Curiouser and curiouser..." color="#eeba00"
+              position="-0.9 0.2 -3" scale="3 1.5 3"></a-text>
+        
+          <!--<a-plane rotation="-90 0 0" width="30" height="30" color="#2a4a8b"></a-plane> -->
+        
+          <a-camera>
+            <a-cursor></a-cursor>
+          </a-camera>
+
+        </a-scene>          
   </body>
 </html>
