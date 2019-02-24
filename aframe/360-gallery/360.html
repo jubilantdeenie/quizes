@@ -1,3 +1,12 @@
+<html>
+  <head>
+    <title>360° Image Browser</title>
+    <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@3.x.x/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.x.x/dist/aframe-event-set-component.min.js"></script>
+  </head>
+  <body>
 <a-scene>
   <a-assets>
     <audio id="click-sound" src="audio/click.ogg"></audio>
@@ -9,6 +18,14 @@
     <img id="cubes-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-cubes.jpg">
     <img id="sechelt" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
     <img id="sechelt-thumb" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
+  
+    <script id="plane" type="text/html">
+      <a-entity class="link"
+        geometry="primitive: plane; height: 1; width: 1"
+        material="shader: flat; src: #cubes-thumb"
+        sound="on: click; src: #click-sound"></a-entity>
+    </script>
+  
   </a-assets>
 
   <!-- 360-degree image. -->
@@ -27,3 +44,5 @@
     </a-cursor>
   </a-camera>
 </a-scene>
+</body>
+</html>
